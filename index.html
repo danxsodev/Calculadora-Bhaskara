@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Calculadora de Bhaskara</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de Bhaskara</h1>
+    </header>
+
+    <main>
+        <label for="a">Digite valor A</label>
+        <input type="text" id="a" placeholder="Digite valor A">
+
+        <label for="b">Digite valor B</label>
+        <input type="text" id="b" placeholder="Digite valor B">
+
+        <label for="c">Digite valor C</label>
+        <input type="text" id="c" placeholder="Digite valor C">
+
+        <label for="delta">Valor de delta</label>
+        <input type="text" id="delta" placeholder="Valor de delta" disabled>
+
+        <label for="x1">Valor de X1</label>
+        <input type="text" id="x1" placeholder="Valor de X1" disabled>
+
+        <label for="x2">Valor de X2</label>
+        <input type="text" id="x2" placeholder="Valor de X2" disabled>
+
+        <input type="button" id="calcular" class="button" onclick="Calcular()" value="Calcular">
+        
+        <input type="reset" id="limpar" class="button" onclick="Limpar()" value="Limpar">
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
