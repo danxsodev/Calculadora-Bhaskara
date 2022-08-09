@@ -1,60 +1,51 @@
-function Calcular() {
-    var va = document.getElementById("a").value;
-    var vb = document.getElementById("b").value;
-    var vc = document.getElementById("c").value;
-    var delta = b**2-(4*a*c);
-    var vx1 = document.getElementById("x1").value;
-    var vx2 = document.getElementById("x2").value;
-
-    if ((isNaN(va))||(va=="")||(va==0)) {
-        window.alert("O 1º termo não pode ser vazio, zero ou caracter!");
-        document.getElementById("a").value = "";
-        document.getElementById("delta").value = "";
-        document.getElementById("x1").value = "";
-        document.getElementById("x2").value = "";
-        document.getElementById("a").focus();
+function Mostrar() {
+   const numMes= document.getElementById("textboxNum").value;
+   
+   if (isNaN(numMes)) {
+        alert("Digite somente números!");
+        document.getElementById("textboxExtenso").value="Inválido";
     }
 
-    else if ((isNaN(vb))||(vb=="")) {
-        window.alert("O 2º termo não pode ser vazio, zero ou caracter!");
-        document.getElementById("b").value = "";
-        document.getElementById("delta").value = "";
-        document.getElementById("x1").value = "";
-        document.getElementById("x2").value = "";
-        document.getElementById("b").focus();
-    }
+   else if (numMes == "1") 
+        document.getElementById("textboxExtenso").value="Janeiro";
 
-    else if ((isNaN(vc))||(vc=="")) {
-        window.alert("O 2º termo não pode ser vazio, zero ou caracter!");
-        document.getElementById("c").value = "";
-        document.getElementById("delta").value = "";
-        document.getElementById("x1").value = "";
-        document.getElementById("x2").value = "";
-        document.getElementById("c").focus();
-    }
+    else if (numMes == "2") 
+        document.getElementById("textboxExtenso").value="Fevereiro";
+                
+    else if (numMes == "3") 
+        document.getElementById("textboxExtenso").value="Março";
+    
+    else if (numMes == "4") 
+        document.getElementById("textboxExtenso").value="Abril";
+    
+    else if (numMes == "5") 
+        document.getElementById("textboxExtenso").value="Maio";
+    
+    else if (numMes == "6") 
+        document.getElementById("textboxExtenso").value="Junho";
+    
+    else if (numMes == "7") 
+        document.getElementById("textboxExtenso").value="Julho";
+     
+    else if (numMes == "8") 
+         document.getElementById("textboxExtenso").value="Agosto";
 
-    else {
-        va = parseFloat(va);
-        vb = parseFloat(vb);
-        vc = parseFloat(vc);
-        delta = Math.pow(vb,2)-4*va*vc;
-        document.getElementById("delta").value = delta;
-        
-        if (delta > 0) {
-            vx1 = (-vb+Math.sqrt(delta))/(2*va);
-            vx2 = (-vb-Math.sqrt(delta))/(2*va);
-            document.getElementById("x1").value = vx1;
-            document.getElementById("x2").value = vx2;
-        }
+    else if (numMes == "9") 
+        document.getElementById("textboxExtenso").value="Setembro";
+    
+    else if (numMes == "10") 
+        document.getElementById("textboxExtenso").value="Outubro";
 
-        else if (delta < 0) {
-            window.alert("Não há raízes reais");
-        }
-    }
+    else if (numMes == "11") 
+        document.getElementById("textboxExtenso").value="Novembro";
+
+    else if (numMes == "12") 
+        document.getElementById("textboxExtenso").value="Dezembro";
+
+    else
+        document.getElementById("textboxExtenso").value="Inválido";
 }
 
 function Limpar() {
-    document.getElementById("a").focus();
-    document.getElementById("x1").style.width="10%";
-    document.getElementById("x2").style.width="10%";
+    document.getElementById("textboxNum").focus();
 }
